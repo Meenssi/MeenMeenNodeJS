@@ -13,11 +13,11 @@
         <!-- Navigation Bar -->
         <header>
             <nav>
-                <img class="logo" src="/img/MeenMeen.svg" alt="logo">
+                <img class="logo" src="<%= LOGOimg %>" alt="logo" style="width: 200px;"> 
                 <div class="links">
-                    <a href="#">About</a>
-                    <a href="#">Docs</a>
-                    <button class="button_1" href="#">Login</button>
+                    <a href="#"><%= font1 %></a>
+                    <a href="#"><%= font2 %></a>
+                    <button class="button_1" href="#"><%= font3 %></button>
                 </div> 
             </nav>
         </header>
@@ -27,10 +27,16 @@
             <h1 class="content_font1"><%=contentfont1 %></h1>
             <h4 class="content_font2"><%=contentfont2 %></h4>
             <div class="icons">
+                <!-- Add Parameter that forEach loop-->
+                <% obj_icon.forEach(function(icon){ %>
                 <div class="icon">
-                    <img src="/img/email 1.svg" alt="email">
-                    <p class="icon_info">sirapatson.imkr <br> @bumail.net</p>
+                    <img src="<%= icon.img %>" alt="email">
+                    <p class="icon_info"><%= icon.info %></p>
                 </div>
+
+                <% }) %>
+
+                <!-- Not use
                 <div class="icon">
                     <img src="/img/facebook 1.svg" alt="facebook">
                     <p class="icon_info">MeenMeen</p>
@@ -42,7 +48,7 @@
                 <div class="icon">
                     <img src="/img/twitter 1.svg" alt="twitter">
                     <p class="icon_info">MeenMeen</p>
-                </div>
+                </div> -->
             </div>
         </section> 
 

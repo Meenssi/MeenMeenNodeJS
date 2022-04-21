@@ -26,6 +26,27 @@ var feature = [
 //Add content Fonts Variables
 var contentfont1 ="ONLINE CREATIVE WEBSITE"
 var contentfont2 = "Presented By MeenMeen"
+
+//Add Contents Icon Variables
+var icon = [
+    {img : "/img/facebook 1.svg",
+    info : "MeenMeen"},
+
+    {img : "/img/youtube 1.svg",
+    info : "MeenMeen"},
+
+    {img : "/img/twitter 1.svg",
+    info : "MeenMeen"},
+
+    {img : "/img/email 1.svg",
+    info : "sirapatson.imkr@bumail.net"}
+]
+
+//Add Navigation Bar Fonts Variables
+var font1 = "ABOUT"
+var font2 = "DOCS"
+var font3 = "LOGIN"
+var LOGOimg = "/img/Shikimori.jpeg"
  
 //Set & Call EJS
 app.set('view engine','ejs')
@@ -46,9 +67,15 @@ app.get("/",(req,res) =>{
 
 //Connect index2.ejs
 app.get("/index2",(req,res) =>{
-    res.render('index2', {obj_feature : feature,
+    res.render('index2', {
+        obj_feature : feature,
+        obj_icon : icon,
+        LOGOimg : LOGOimg,
+        font1 : font1,
+        font2 : font2,
+        font3 : font3,
         contentfont1 : contentfont1,
-        contentfont2 : contentfont2})
+        contentfont2 : contentfont2,})
 })
  
 //Open Server
