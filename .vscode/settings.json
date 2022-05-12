@@ -8,5 +8,6 @@
         "imkr",
         "sirapatson",
         "userid"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
